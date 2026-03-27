@@ -1,27 +1,26 @@
 def string_methods():
-    """Demuestra el uso de métodos de string: strip, lstrip, rstrip, upper, lower,
-    title, find, replace, count, operador in, slicing con paso, reverso,
-    f-strings y strings multilínea.
-    """
     nombre = "   Grace Hopper   "
     frase = "Python es un gran lenguaje de programacion"
     multilinea = """Linea 1
-    Linea 2
-    Linea 3"""
+Linea 2
+Linea 3"""
 
-    a= ("Grace Hopper")
-    b= ("Python es un gran lenguaje de programacion")
-    multilinea= """Linea 1
-    Linea 2
-    Linea 3"""
-    print(a.title())
-    print(a.find("b"))
-    print(a.replace(a, "b"))
-    print(a.count("b"))
-    print(a in (b))
-    print(a[2:3])
-    print(a[::-1])
-    print(f"tu palabra es: {a}")
-    print (multilinea)
+    print(f"Strip: {nombre.strip()}")
+    print(f"Lstrip: {nombre.lstrip()}")
+    print(f"Rstrip: {nombre.rstrip()}")
+    print(f"Upper: {frase.upper()}")
+    print(f"Lower: {frase.lower()}")
+    print(f"Title: {frase.title()}")
+    print(f"Find: {frase.find('gran')}")
+    print(f"Replace: {frase.replace('programacion', 'desarrollo')}")
+    print(f"Count: {frase.count('a')}")
+    print(f"Contiene Python: {'Python' in frase}")
+    print(f"Contiene Java: {'Java' in frase}")
+    print(f"Slice: {frase[:6]}")
+    print(f"Paso: {frase[0:6:2]}")
+    print(f"Reverso: {frase[5::-1]}")
+    print(f"Formato: {nombre.strip()} sabe Python")
+    print(multilinea)
+
 
 string_methods()

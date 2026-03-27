@@ -1,9 +1,15 @@
 def rectangle():
-    base = int(input("Base:"))
-    altura = int(input("Altura:"))
-    area = base * altura
-    perimetro = 2 * (base + altura)
-    print(f"Area: {area}")
-    print(f"Perimetro: {perimetro}")
+    base_in = input()
+    altura_in = input()
+
+    base = int(base_in)
+    altura = int(altura_in)
+
+    print(f"Base: {base}")
+    print(f"Altura: {altura}")
+    print(f"Area: {base * altura}")
+    print(f"Perimetro: {2 * (base + altura)}")
+
+
 
 rectangle()

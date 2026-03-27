@@ -1,43 +1,45 @@
 def ficha():
-    nombre = input("Ingrese su nombre completo: ")
-    email = input("Ingrese su email completo: ")
-    nota1 = input("nota 1:")
-    nota2 = input("nota 2:")
-    nota3 = input("nota 3:")
+    nombre_raw = input()
+    email_raw = input()
+    n1 = int(input())
+    n2 = int(input())
+    n3 = int(input())
 
-    nombre = nombre.strip()
+    nombre = nombre_raw.strip()
+    email = email_raw.lower()
 
-    pos_espacio = nombre.find(" ")
+    # Iniciales
+    espacio = nombre.find(" ")
+    iniciales = (nombre[0] + nombre[espacio + 1]).upper()
 
-    iniciales2 = (nombre[0] + nombre[pos_espacio + 1])
-    nombre2 = nombre[:pos_espacio]
-    apellido = nombre[pos_espacio + 1:]
-    usuario = f"{apellido.lower()}.{nombre2.lower()}"
+    # Usuario: apellido.nombre
+    nombre_solo = nombre[:espacio].lower()
+    apellido_solo = nombre[espacio + 1:].lower()
 
-    buscar = "@"
-    buscar2 = email.find(buscar)
-    secreto = nombre[::-1]
+    suma = n1 + n2 + n3
+    promedio = suma / 3
 
-    print("""    =================
-    FICHA DEL ALUMNO
-    =================""")
-    print(f"Nombre: {nombre.title()}")
-    print(f"Email: {email.lower()}")
-    print(f"caracteres en nombre: {len(nombre)}")
-    print(f"Iniciales: {iniciales2.upper()}")
-    print(f"usuario: {usuario.strip()}")
-    print(f"Email valido: {buscar in email}")
-    print(f"Dominio: {email[buscar2 + 1:]}")
-    print(f"Nombre para archivo: {nombre.replace(' ', '_')}")
-    print(f"Cantidad de a: {nombre.lower().count('a')}")
-    print(f"Nombre secreto: {secreto.upper()}")
-    print(f"Nota 1: {int(nota1)}")
-    print(f"Nota 2: {int(nota2)}")
-    print(f"Nota 3: {int(nota3)}")
-    print(f"Suma: {int(nota1) + int(nota2) + int(nota3)}")
-    print(f"Promedio: {(int(nota1) + int(nota2) + int(nota3)) / 3}")
-    print(f"Promedio entero: {(int(nota1) + int(nota2) + int(nota3)) // 3}")
     print("=" * 24)
+    print("    FICHA DEL ALUMNO")
+    print("=" * 24)
+    print(f"Nombre: {nombre.title()}")
+    print(f"Email: {email}")
+    print(f"Caracteres en nombre: {len(nombre)}")
+    print(f"Iniciales: {iniciales}")
+    print(f"Usuario: {apellido_solo}.{nombre_solo}")
+    print(f"Email valido: {'@' in email}")
+    print(f"Dominio: {email[email.find('@') + 1:]}")
+    print(f"Nombre para archivo: {nombre.title().replace(' ', '_')}")
+    print(f"Cantidad de a: {nombre.lower().count('a')}")
+    print(f"Codigo secreto: {nombre[::-1].upper()}")
+    print(f"Nota 1: {n1}")
+    print(f"Nota 2: {n2}")
+    print(f"Nota 3: {n3}")
+    print(f"Suma: {suma}")
+    print(f"Promedio: {promedio}")
+    print(f"Promedio entero: {suma // 3}")
+    print("=" * 24)
+
 
 
 ficha()
