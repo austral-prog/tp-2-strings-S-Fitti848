@@ -1,7 +1,7 @@
 def casting():
     """Lee precio, descuento y cantidad como texto y calcula el
     precio con descuento y el total."""
-    pass
+
 
     precio=str(input("precio:"))
     descuento= str(input("descuento:"))
