@@ -15,5 +15,5 @@ def casting():
     print(f"Total: {precio_final * c}")
 
 
-
-casting()
+if __name__ == "__main__":
+    casting()

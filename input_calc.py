@@ -11,5 +11,5 @@ def rectangle():
     print(f"Perimetro: {2 * (base + altura)}")
 
 
-
-rectangle()
+if __name__ == "__main__":
+    rectangle()

@@ -41,5 +41,5 @@ def ficha():
     print("=" * 24)
 
 
-
-ficha()
+if __name__ == "__main__":
+    ficha()

@@ -7,5 +7,5 @@ def string_info():
     print(f"Repetida: {palabra * 3}")
     print(f"Decorada: ***{palabra}***")
 
-
-string_info()
+if __name__ == "__main__":
+    string_info()

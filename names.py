@@ -8,5 +8,5 @@ def names():
     print(nc.upper())
     print("\t" + nc.lower())
 
-
-names()
+if __name__ == "__main__":
+    names()
