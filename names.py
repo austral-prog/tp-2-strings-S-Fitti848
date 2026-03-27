@@ -1,12 +1,26 @@
-def names():
-    nombre = input()
-    apellido = input()
-    nc = nombre + " " + apellido
+def string_methods():
+    nombre = "   Grace Hopper   "
+    frase = "Python es un gran lenguaje de programacion"
+    multilinea = """Linea 1
+Linea 2
+Linea 3"""
 
-    print(nc.lower())
-    print(nc.title())
-    print(nc.upper())
-    print("\t" + nc.lower())
+    print(f"Strip: {nombre.strip()}")
+    print(f"Lstrip: {nombre.lstrip()}")
+    print(f"Rstrip: {nombre.rstrip()}")
+    print(f"Upper: {frase.upper()}")
+    print(f"Lower: {frase.lower()}")
+    print(f"Title: {frase.title()}")
+    print(f"Find: {frase.find('gran')}")
+    print(f"Replace: {frase.replace('programacion', 'desarrollo')}")
+    print(f"Count: {frase.count('a')}")
+    print(f"Contiene Python: {'Python' in frase}")
+    print(f"Contiene Java: {'Java' in frase}")
+    print(f"Slice: {frase[0:6]}")
+    print(f"Paso: {frase[0:6:2]}")
+    print(f"Reverso: {frase[5::-1]}")
+    print(f"Formato: {nombre.strip()} sabe Python")
+    print(multilinea)
 
 if __name__ == "__main__":
-    names()
+    string_methods()

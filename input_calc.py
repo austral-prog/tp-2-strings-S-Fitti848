@@ -1,9 +1,6 @@
 def rectangle():
-    base_in = input()
-    altura_in = input()
-
-    base = int(base_in)
-    altura = int(altura_in)
+    base = int(input())
+    altura = int(input())
 
     print(f"Base: {base}")
     print(f"Altura: {altura}")

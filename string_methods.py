@@ -16,7 +16,7 @@ Linea 3"""
     print(f"Count: {frase.count('a')}")
     print(f"Contiene Python: {'Python' in frase}")
     print(f"Contiene Java: {'Java' in frase}")
-    print(f"Slice: {frase[:6]}")
+    print(f"Slice: {frase[0:6]}")
     print(f"Paso: {frase[0:6:2]}")
     print(f"Reverso: {frase[5::-1]}")
     print(f"Formato: {nombre.strip()} sabe Python")

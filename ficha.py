@@ -8,11 +8,9 @@ def ficha():
     nombre = nombre_raw.strip()
     email = email_raw.lower()
 
-    # Iniciales
     espacio = nombre.find(" ")
     iniciales = (nombre[0] + nombre[espacio + 1]).upper()
 
-    # Usuario: apellido.nombre
     nombre_solo = nombre[:espacio].lower()
     apellido_solo = nombre[espacio + 1:].lower()
 
