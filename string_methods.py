@@ -22,5 +22,5 @@ Linea 3"""
     print(f"Formato: {nombre.strip()} sabe Python")
     print(multilinea)
 
-if __name__ == "__main__":
-    string_methods()
+
+string_methods()
