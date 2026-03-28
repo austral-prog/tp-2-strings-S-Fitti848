@@ -17,7 +17,8 @@ def change():
     print("Pesos:")
     print(int(vuelto))
     print("Centavos:")
-    print(round(vuelto % 1 * 100))
+    centavos = round((vuelto - int(vuelto)) * 100)
+    print(centavos)
 
 if __name__ == "__main__":
     change()
