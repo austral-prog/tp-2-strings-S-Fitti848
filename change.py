@@ -10,14 +10,16 @@ def change():
     dinero = int(dinero_raw)
 
     vuelto = dinero - gasto
+    vuelto_str = f"{vuelto:.2f}"
+    partes = vuelto_str.split(".")
 
     print("")
     print("Vuelto")
     print("")
     print("Pesos:")
-    print(int(vuelto))
+    print(int(partes[0]))
     print("Centavos:")
-    print(round((vuelto - int(vuelto)) * 100))
+    print(int(partes[1]))
 
 if __name__ == "__main__":
     change()
