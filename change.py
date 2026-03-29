@@ -17,5 +17,4 @@ def change():
     print("Centavos:")
     print(round((vuelto - int(vuelto)) * 100))
 
-if __name__ == "__main__":
-    change()
+change()
